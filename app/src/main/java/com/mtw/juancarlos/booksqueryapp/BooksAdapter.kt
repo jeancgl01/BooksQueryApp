@@ -41,7 +41,7 @@ class BooksAdapter(booksList: List<Book>, listener: OnItemClickListener) : Recyc
 
         fun bind(book: Book, listener: OnItemClickListener) {
             itemView.tvTitle.text = book.title
-            itemView.tvAuthor.text = book.authors.joinToString(",")
+            itemView.tvAuthor.text = book.author
             Glide.with(itemView.context).load(book.image).into(itemView.imgCover)
 
             itemView.setOnClickListener {
